@@ -32,11 +32,5 @@ Ext.Osiris.RegisterListener("TemplateAddedTo", 4, "after", function(root, item, 
     end
 end)
 
-Ext.Events.GameStateChanged:Subscribe(function(e)
-    if e.FromState == "LoadSession" then
-        MaxStackThings()
-    end
-end)
-
 --Ext.Events.StatsLoaded:Subscribe(MaxStackThings)
---Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", MaxStackThings)
+Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", MaxStackThings)
