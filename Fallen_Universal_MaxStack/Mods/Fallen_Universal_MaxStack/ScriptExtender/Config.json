@@ -1,5 +1,5 @@
 {
-    "RequiredVersion": 10,
+    "RequiredVersion": 12,
     "ModTable": "Universal_Max_Stack",
     "FeatureFlags": ["Lua"]
 }
