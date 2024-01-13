@@ -25,7 +25,6 @@ local function MaxStackRootTemplates()
     local endTime = Ext.Utils.MonotonicTime()
     local elapsedTime = endTime - startTime
     BasicPrint("Root Templates MaxStackAmount modified in " .. elapsedTime .. " milliseconds!", _, _, "Fall_MaxStack", true)
-
 end
 
 Ext.Osiris.RegisterListener("TemplateAddedTo", 4, "after", function(root, item, inventoryHolder, addType)
