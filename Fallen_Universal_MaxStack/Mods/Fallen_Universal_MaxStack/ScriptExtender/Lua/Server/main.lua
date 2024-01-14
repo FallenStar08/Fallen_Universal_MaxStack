@@ -31,7 +31,7 @@ Ext.Osiris.RegisterListener("TemplateAddedTo", 4, "after", function(root, item, 
     if Osi.IsContainer(item) == 0 then
         local entity = Ext.Entity.Get(item)
         if entity.ServerItem then
-            entity.ServerItem.Item.Template.MaxStackAmount = MaxStackAmount
+            entity.ServerItem.Template.MaxStackAmount = MaxStackAmount
         end
     end
 end)
