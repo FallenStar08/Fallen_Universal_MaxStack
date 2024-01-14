@@ -2,6 +2,9 @@ Ext.Require("Shared/_Globals.lua")
 Ext.Require("Shared/_Utils.lua")
 local MaxStackAmount = 99999999
 
+-- Sets the MaxStackAmount property to a large value for all local item templates.
+-- This allows stacking items like potions and scrolls & equipments up to a very high amount.
+-- Called after the level has started.
 local function MaxStackLocalTemplates()
     local startTime = Ext.Utils.MonotonicTime()
     local localTemplates = Ext.Template.GetAllLocalTemplates() or {}
@@ -14,6 +17,9 @@ local function MaxStackLocalTemplates()
     local elapsedTime = endTime - startTime
     BasicPrint("Local Templates MaxStackAmount modified in " .. elapsedTime .. " milliseconds!", _, _, "Fall_MaxStack", true)
 end
+-- Sets the MaxStackAmount property to a large value for all root item templates.
+-- This allows stacking items like potions and scrolls & equipments  up to a very high amount.
+-- Called before the level has started.
 local function MaxStackRootTemplates()
     local startTime = Ext.Utils.MonotonicTime()
     local templates = Ext.Template.GetAllRootTemplates() or {}
