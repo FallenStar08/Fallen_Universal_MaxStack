@@ -1,5 +1,3 @@
-Ext.Require("Shared/_Globals.lua")
-Ext.Require("Shared/_Utils.lua")
 local MaxStackAmount = 99999999
 
 -- Sets the MaxStackAmount property to a large value for all local item templates.
@@ -44,3 +42,5 @@ end)
 
 Ext.Events.SessionLoading:Subscribe(MaxStackRootTemplates)
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", MaxStackLocalTemplates)
+
+
